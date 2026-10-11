@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudhakar R — Curriculum Vitae</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #111827;
+      background-color: #f3f4f6;
+    }
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-shadow-none {
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+      @page {
+        margin: 12mm 15mm;
+      }
+    }
+  </style>
+</head>
+<body class="py-10 px-4 sm:px-6">
+
+  <!-- TOP ACTION BAR (Hidden when printing/saving to PDF) -->
+  <div class="max-w-4xl mx-auto mb-6 flex items-center justify-between no-print bg-white p-4 rounded-xl shadow-sm border border-zinc-200">
+    <div>
+      <h1 class="text-sm font-bold text-zinc-900">Sudhakar R — Professional CV</h1>
+      <p class="text-xs text-zinc-500">Ready for instant download or Print-to-PDF</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="px-4 py-2 rounded-lg text-xs font-semibold text-zinc-700 hover:bg-zinc-100 transition-colors">
+        ← Back to Portfolio
+      </a>
+      <button onclick="window.print()" class="px-5 py-2 rounded-lg bg-[#0c0b10] hover:bg-zinc-800 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+        <span>Save as PDF / Print</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- A4 PRINTABLE RESUME SHEET -->
+  <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-xl border border-zinc-200 print-shadow-none text-zinc-800">
+    
+    <!-- HEADER -->
+    <header class="border-b border-zinc-300 pb-5 mb-6">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+        <h1 class="text-3xl font-extrabold tracking-tight text-zinc-950">SUDHAKAR R</h1>
+        <span class="text-xs font-semibold text-zinc-600 uppercase tracking-wider">Biostatistician &amp; Epidemiologist</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-y-1 gap-x-4 text-xs text-zinc-600 mt-2 font-mono">
+        <span>+91 9344731388</span>
+        <span>&bull;</span>
+        <a href="mailto:sudhakarips@gmail.com" class="hover:underline text-blue-600">sudhakarips@gmail.com</a>
+        <span>&bull;</span>
+        <span>Chennai, Tamil Nadu</span>
+        <span>&bull;</span>
+        <a href="https://www.linkedin.com/in/sudhakar-ravi-79a202293" target="_blank" class="hover:underline text-blue-600">linkedin.com/in/sudhakar-ravi</a>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section class="mb-6">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-200 pb-1 mb-2">
+        Professional Summary
+      </h2>
+      <p class="text-xs leading-relaxed text-zinc-700">
+        MSc Biostatistics &amp; Epidemiology candidate with an undergraduate clinical background in Critical Care Technology (CGPA 8.4) and practical experience in secondary public health survey analytics (NFHS-5). Skilled in SAS, R, Python, Stata, SPSS, and Jamovi, with expertise spanning multivariable logistic regression, PRISMA systematic reviews, KoboToolbox primary data gathering, and ICH-GCP clinical trial frameworks. Seeking an Epidemiologist/Biostatistician internship to apply analytical, epidemiological, and bedside clinical insights to population health research and disease surveillance.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="mb-6">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-200 pb-1 mb-3">
+        Education
+      </h2>
+      <div class="space-y-3">
+        <div>
+          <div class="flex justify-between items-baseline text-xs">
+            <h3 class="font-bold text-zinc-950">Master of Science (MSc) &mdash; Biostatistics &amp; Epidemiology</h3>
+            <span class="font-mono text-zinc-500">2025 &ndash; 2027</span>
+          </div>
+          <p class="text-xs text-zinc-600">SRM Institute of Science and Technology, Kattankulathur, Chennai</p>
+          <p class="text-[11px] text-zinc-500 mt-0.5">Specialization: Advanced Biostatistical Methods, Survey Sampling, Survival Analysis, Disease Surveillance.</p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-baseline text-xs">
+            <h3 class="font-bold text-zinc-950">Bachelor of Science (BSc) &mdash; Critical Care Technology</h3>
+            <span class="font-mono text-zinc-500">2020 &ndash; 2024</span>
+          </div>
+          <p class="text-xs text-zinc-600">Sri Balaji Vidyapeeth, Pondicherry &bull; <strong class="text-zinc-900">CGPA: 8.4 (Distinction)</strong></p>
+          <p class="text-[11px] text-zinc-500 mt-0.5">Focus: ICU Hemodynamics, Pathophysiology, Arterial Blood Gas Analysis, Critical Patient Data Monitoring.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH & PROJECTS -->
+    <section class="mb-6">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-200 pb-1 mb-3">
+        Research &amp; Field Inquiries
+      </h2>
+      <div class="space-y-4 text-xs">
+        <div>
+          <div class="flex justify-between items-baseline">
+            <h3 class="font-bold text-zinc-950">Household Air Pollution &amp; Acute Respiratory Illness in Under-5 Children (NFHS-5)</h3>
+            <span class="font-mono text-zinc-500">SAS Pipeline</span>
+          </div>
+          <ul class="list-disc list-outside ml-4 space-y-1 text-zinc-700 mt-1">
+            <li>Conducted secondary epidemiological analysis utilizing nationwide microdata from NFHS-5 to assess health impacts of solid cooking fuel emissions.</li>
+            <li>Performed data cleaning, variable re-coding, and complex sampling weight adjustments in SAS.</li>
+            <li>Built multivariable logistic regression models to compute adjusted Odds Ratios (aOR), controlling for maternal education and socioeconomic quintiles.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-baseline">
+            <h3 class="font-bold text-zinc-950">Knowledge, Attitudes &amp; Practices (KAP) Towards Rabies in Kattankulathur</h3>
+            <span class="font-mono text-zinc-500">KOBO Collect &bull; SPSS</span>
+          </div>
+          <ul class="list-disc list-outside ml-4 space-y-1 text-zinc-700 mt-1">
+            <li>Engineered structured digital survey instruments in KoboToolbox for primary field data gathering across Chengalpattu District.</li>
+            <li>Conducted descriptive profiling, cross-tabulations, and Pearson Chi-Square ($\chi^2$) hypothesis tests in SPSS to identify risk determinants.</li>
+            <li>Identified critical gaps in 15-minute wound washing and post-exposure prophylaxis compliance among animal bite victims.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-baseline">
+            <h3 class="font-bold text-zinc-950">Systematic Review &amp; Synthesis on Respiratory &amp; Ocular Pathologies</h3>
+            <span class="font-mono text-zinc-500">PRISMA Framework</span>
+          </div>
+          <ul class="list-disc list-outside ml-4 space-y-1 text-zinc-700 mt-1">
+            <li>Conducted comprehensive multi-database literature screening and risk-of-bias appraisals on environmental and clinical exposure determinants.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="mb-6">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-200 pb-1 mb-3">
+        Experience &amp; Leadership
+      </h2>
+      <div class="space-y-3 text-xs">
+        <div>
+          <div class="flex justify-between items-baseline">
+            <h3 class="font-bold text-zinc-950">Resource Person &bull; Statistical Data Analysis Trainer</h3>
+            <span class="font-mono text-zinc-500">SRM School of Public Health</span>
+          </div>
+          <p class="text-zinc-700 mt-0.5">Conducted a hands-on Jamovi statistical workshop for public health researchers, covering exploratory data analysis, parametric/non-parametric tests, and regression modeling.</p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-baseline">
+            <h3 class="font-bold text-zinc-950">Clinical Intern &bull; Critical Care Unit</h3>
+            <span class="font-mono text-zinc-500">Sri Balaji Vidyapeeth Teaching Hospital</span>
+          </div>
+          <p class="text-zinc-700 mt-0.5">Documented hemodynamic parameters on critically ill ICU patients, observing acute disease progression and infection trends, establishing a direct bedside clinical foundation for macro-epidemiology.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="mb-6">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-200 pb-1 mb-2">
+        Technical &amp; Methodological Skills
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+        <div>
+          <span class="font-bold text-zinc-950 block">Statistical Computing:</span>
+          <span class="text-zinc-700">SAS, R, Python, Stata, SPSS, Jamovi, KoboToolbox</span>
+        </div>
+        <div>
+          <span class="font-bold text-zinc-950 block">Epidemiology:</span>
+          <span class="text-zinc-700">Study Design, Sampling, Odds Ratios, Confounding, Survey Analysis</span>
+        </div>
+        <div>
+          <span class="font-bold text-zinc-950 block">Clinical Trials &amp; GCP:</span>
+          <span class="text-zinc-700">ICH-GCP, RCT Design, Randomisation, Blinding, CRFs, Adverse Events</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & LANGUAGES -->
+    <section>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-200 pb-1 mb-2">
+            Certifications
+          </h2>
+          <ul class="text-xs text-zinc-700 space-y-1">
+            <li>&bull; <a href="https://drive.google.com/file/d/18-Rd8mJGHekIfaK8KZCU-TDtBN93NTGu/view" target="_blank" rel="noopener noreferrer" class="font-bold text-zinc-950 underline decoration-zinc-400 hover:text-black hover:decoration-black">UNICEF: Data Analysis &mdash; Certificate of Completion ↗</a></li>
+            <li>&bull; <a href="https://drive.google.com/file/d/1Fda4T57aR6361smOqVqt8E-SaxUFUctP/view" target="_blank" rel="noopener noreferrer" class="font-bold text-zinc-950 underline decoration-zinc-400 hover:text-black hover:decoration-black">UNICEF: Primary Data Collection in Field Environments ↗</a></li>
+            <li>&bull; <a href="https://drive.google.com/file/d/1hLZEW8cfjEtXNN0IkoioUruSsFk54hmP/view" target="_blank" rel="noopener noreferrer" class="font-bold text-zinc-950 underline decoration-zinc-400 hover:text-black hover:decoration-black">Coursera &bull; DTU: Antimicrobial Resistance &mdash; Theory &amp; Methods ↗</a></li>
+            <li>&bull; <a href="https://drive.google.com/file/d/173fqJf0mw8e_iFkrP70MDh0QEQA0rCTq/view" target="_blank" rel="noopener noreferrer" class="font-bold text-zinc-950 underline decoration-zinc-400 hover:text-black hover:decoration-black">Coursera &bull; JHU: Outbreaks and Epidemics &mdash; Infectious Disease Surveillance ↗</a></li>
+            <li>&bull; <a href="https://drive.google.com/file/d/1f3-d5oKEMGaecCeKGJOO-Mkk7lDkG82q/view" target="_blank" rel="noopener noreferrer" class="font-bold text-zinc-950 underline decoration-zinc-400 hover:text-black hover:decoration-black">Good Clinical Practice &amp; Research Ethics &mdash; Certified Credential ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-200 pb-1 mb-2">
+            Languages &amp; Core Strengths
+          </h2>
+          <p class="text-xs text-zinc-700"><strong>Languages:</strong> English, Tamil</p>
+          <p class="text-xs text-zinc-700 mt-1"><strong>Core Strengths:</strong> Translating acute clinical observations into population-level epidemiological evidence; complex secondary survey analysis.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
