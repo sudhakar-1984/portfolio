@@ -141,6 +141,15 @@
       font-stretch: 90%;
     }
 
+    /* Hide scrollbar for smooth carousel slider */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
     /* Basic smooth animations */
     @keyframes heroFadeUp {
       from {
@@ -723,126 +732,139 @@
 
         </div>
 
-        <!-- Verified Certifications & Credentials Grid -->
+        <!-- Verified Certifications & Credentials Grid / Slider -->
         <div id="certifications" class="mt-16 pt-12 border-t border-white/10 scroll-mt-28">
-          <div class="flex items-center justify-between mb-8">
-            <div>
-              <p class="stretch-narrow text-xs uppercase tracking-[0.25em] text-primary font-bold">
-                Professional Credentials
-              </p>
-              <h3 class="stretch-wide text-2xl sm:text-3xl font-extrabold text-white mt-1">
-                Certifications &amp; Accreditations
-              </h3>
-            </div>
+          <div class="mb-8">
+            <p class="stretch-narrow text-xs uppercase tracking-[0.25em] text-primary font-bold">
+              Professional Credentials
+            </p>
+            <h3 class="stretch-wide text-2xl sm:text-3xl font-extrabold text-white mt-1">
+              Certifications &amp; Accreditations
+            </h3>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Slider Container with Left and Right Floating Buttons -->
+          <div class="relative group/slider">
+            
+            <!-- Left Arrow Button (On the left side of the cards) -->
+            <button onclick="scrollCertificates(-1)" aria-label="Previous certificate" class="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-zinc-950/90 text-white shadow-xl hover:border-primary hover:bg-zinc-900 hover:text-primary transition-all active:scale-95 cursor-pointer backdrop-blur-md">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+
+            <!-- Right Arrow Button (On the right side of the cards) -->
+            <button onclick="scrollCertificates(1)" aria-label="Next certificate" class="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-zinc-950/90 text-white shadow-xl hover:border-primary hover:bg-zinc-900 hover:text-primary transition-all active:scale-95 cursor-pointer backdrop-blur-md">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Horizontal Swipeable Track -->
+            <div id="cert-slider" class="no-scrollbar flex gap-5 overflow-x-auto scroll-smooth pb-4 px-2 snap-x snap-mandatory select-none" style="-webkit-overflow-scrolling: touch;">
             
             <!-- Cert 1: UNICEF Data Analysis (Linked to Google Drive) -->
-            <a href="https://drive.google.com/file/d/18-Rd8mJGHekIfaK8KZCU-TDtBN93NTGu/view" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col justify-between p-5 rounded-2xl bg-card border border-white/10 hover:border-primary/80 transition-all duration-300 hover:-translate-y-1">
+            <a href="https://drive.google.com/file/d/18-Rd8mJGHekIfaK8KZCU-TDtBN93NTGu/view" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col justify-between p-6 rounded-2xl bg-card border border-white/10 hover:border-primary/80 transition-all duration-300 hover:-translate-y-1 w-[280px] sm:w-[320px] shrink-0 snap-start">
               <div>
-                <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center justify-between mb-4">
                   <span class="inline-block px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-[10px] font-mono font-bold text-primary">
                     UNICEF &bull; AGORA
                   </span>
                   <svg class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </div>
-                <h4 class="text-base font-bold text-white group-hover:text-primary transition-colors leading-snug">
+                <h4 class="text-lg font-bold text-white group-hover:text-primary transition-colors leading-snug">
                   Data Analysis
                 </h4>
-                <p class="text-xs text-zinc-400 mt-2">
+                <p class="text-xs text-zinc-400 mt-2.5 leading-relaxed">
                   Issued by UNICEF (Global Cluster Coordination Unit &amp; EMOPS) &bull; Verified Certificate
                 </p>
               </div>
-              <div class="mt-4 pt-3 border-t border-white/5 text-[11px] font-semibold text-primary">
+              <div class="mt-6 pt-3 border-t border-white/5 text-xs font-semibold text-primary">
                 View Certificate
               </div>
             </a>
 
             <!-- Cert 2: Primary Data Collection (Linked to Google Drive) -->
-            <a href="https://drive.google.com/file/d/1Fda4T57aR6361smOqVqt8E-SaxUFUctP/view" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col justify-between p-5 rounded-2xl bg-card border border-white/10 hover:border-primary/80 transition-all duration-300 hover:-translate-y-1">
+            <a href="https://drive.google.com/file/d/1Fda4T57aR6361smOqVqt8E-SaxUFUctP/view" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col justify-between p-6 rounded-2xl bg-card border border-white/10 hover:border-primary/80 transition-all duration-300 hover:-translate-y-1 w-[280px] sm:w-[320px] shrink-0 snap-start">
               <div>
-                <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center justify-between mb-4">
                   <span class="inline-block px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-[10px] font-mono font-bold text-primary">
                     UNICEF &bull; AGORA
                   </span>
                   <svg class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </div>
-                <h4 class="text-base font-bold text-white group-hover:text-primary transition-colors leading-snug">
+                <h4 class="text-lg font-bold text-white group-hover:text-primary transition-colors leading-snug">
                   Primary Data Collection in Field Environments
                 </h4>
-                <p class="text-xs text-zinc-400 mt-2">
+                <p class="text-xs text-zinc-400 mt-2.5 leading-relaxed">
                   Field enumeration, cluster sampling protocols, and digital surveying integrity.
                 </p>
               </div>
-              <div class="mt-4 pt-3 border-t border-white/5 text-[11px] font-semibold text-primary">
+              <div class="mt-6 pt-3 border-t border-white/5 text-xs font-semibold text-primary">
                 View Certificate
               </div>
             </a>
 
             <!-- Cert 3: Antimicrobial Resistance (Linked to Google Drive) -->
-            <a href="https://drive.google.com/file/d/1hLZEW8cfjEtXNN0IkoioUruSsFk54hmP/view" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col justify-between p-5 rounded-2xl bg-card border border-white/10 hover:border-primary/80 transition-all duration-300 hover:-translate-y-1">
+            <a href="https://drive.google.com/file/d/1hLZEW8cfjEtXNN0IkoioUruSsFk54hmP/view" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col justify-between p-6 rounded-2xl bg-card border border-white/10 hover:border-primary/80 transition-all duration-300 hover:-translate-y-1 w-[280px] sm:w-[320px] shrink-0 snap-start">
               <div>
-                <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center justify-between mb-4">
                   <span class="inline-block px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-[10px] font-mono font-bold text-primary">
                     Coursera &bull; DTU
                   </span>
                   <svg class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </div>
-                <h4 class="text-base font-bold text-white group-hover:text-primary transition-colors leading-snug">
+                <h4 class="text-lg font-bold text-white group-hover:text-primary transition-colors leading-snug">
                   Antimicrobial Resistance &mdash; Theory &amp; Methods
                 </h4>
-                <p class="text-xs text-zinc-400 mt-2">
+                <p class="text-xs text-zinc-400 mt-2.5 leading-relaxed">
                   Technical University of Denmark &bull; Genomics, surveillance &amp; resistance mechanisms.
                 </p>
               </div>
-              <div class="mt-4 pt-3 border-t border-white/5 text-[11px] font-semibold text-primary">
+              <div class="mt-6 pt-3 border-t border-white/5 text-xs font-semibold text-primary">
                 View Certificate
               </div>
             </a>
 
             <!-- Cert 4: Outbreaks and Epidemics (Linked to Google Drive) -->
-            <a href="https://drive.google.com/file/d/173fqJf0mw8e_iFkrP70MDh0QEQA0rCTq/view" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col justify-between p-5 rounded-2xl bg-card border border-white/10 hover:border-primary/80 transition-all duration-300 hover:-translate-y-1">
+            <a href="https://drive.google.com/file/d/173fqJf0mw8e_iFkrP70MDh0QEQA0rCTq/view" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col justify-between p-6 rounded-2xl bg-card border border-white/10 hover:border-primary/80 transition-all duration-300 hover:-translate-y-1 w-[280px] sm:w-[320px] shrink-0 snap-start">
               <div>
-                <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center justify-between mb-4">
                   <span class="inline-block px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-[10px] font-mono font-bold text-primary">
                     Coursera &bull; JHU
                   </span>
                   <svg class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </div>
-                <h4 class="text-base font-bold text-white group-hover:text-primary transition-colors leading-snug">
+                <h4 class="text-lg font-bold text-white group-hover:text-primary transition-colors leading-snug">
                   Outbreaks and Epidemics &mdash; Infectious Disease Surveillance
                 </h4>
-                <p class="text-xs text-zinc-400 mt-2">
-                  Johns Hopkins University &bull; Epidemic curves, contact tracing &amp; $R_0$ basic reproduction rates.
+                <p class="text-xs text-zinc-400 mt-2.5 leading-relaxed">
+                  Johns Hopkins University &bull; Epidemic curves, contact tracing &amp; $R_0$ reproduction rates.
                 </p>
               </div>
-              <div class="mt-4 pt-3 border-t border-white/5 text-[11px] font-semibold text-primary">
+              <div class="mt-6 pt-3 border-t border-white/5 text-xs font-semibold text-primary">
                 View Certificate
               </div>
             </a>
 
             <!-- Cert 5: Professional Research & GCP Certification (Linked to Google Drive) -->
-            <a href="https://drive.google.com/file/d/1f3-d5oKEMGaecCeKGJOO-Mkk7lDkG82q/view" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col justify-between p-5 rounded-2xl bg-card border border-white/10 hover:border-primary/80 transition-all duration-300 hover:-translate-y-1 sm:col-span-2 lg:col-span-1">
+            <a href="https://drive.google.com/file/d/1f3-d5oKEMGaecCeKGJOO-Mkk7lDkG82q/view" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col justify-between p-6 rounded-2xl bg-card border border-white/10 hover:border-primary/80 transition-all duration-300 hover:-translate-y-1 w-[280px] sm:w-[320px] shrink-0 snap-start">
               <div>
-                <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center justify-between mb-4">
                   <span class="inline-block px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-[10px] font-mono font-bold text-primary">
                     Professional Credential
                   </span>
                   <svg class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </div>
-                <h4 class="text-base font-bold text-white group-hover:text-primary transition-colors leading-snug">
+                <h4 class="text-lg font-bold text-white group-hover:text-primary transition-colors leading-snug">
                   Good Clinical Practice &amp; Research Ethics
                 </h4>
-                <p class="text-xs text-zinc-400 mt-2">
+                <p class="text-xs text-zinc-400 mt-2.5 leading-relaxed">
                   Clinical trial standards, patient protection protocols, and regulatory research methodology.
                 </p>
               </div>
-              <div class="mt-4 pt-3 border-t border-white/5 text-[11px] font-semibold text-primary">
+              <div class="mt-6 pt-3 border-t border-white/5 text-xs font-semibold text-primary">
                 View Certificate
               </div>
             </a>
 
+            </div>
           </div>
         </div>
 
@@ -922,6 +944,15 @@
 
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Horizontal slider scroll function
+    function scrollCertificates(direction) {
+      const slider = document.getElementById('cert-slider');
+      if (slider) {
+        const scrollAmount = 340 * direction;
+        slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }
 
     // Active navigation underline switcher on click & scroll
     const navLinks = document.querySelectorAll('.nav-link');
